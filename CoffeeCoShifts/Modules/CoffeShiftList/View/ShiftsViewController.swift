@@ -16,20 +16,31 @@ class ShiftsViewController: UIViewController, UIScrollViewDelegate{
     var viewModel: ShiftsViewModel?
     var disposeBag = DisposeBag()
 
+    var addNewShiftButton: UIBarButtonItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         ShiftsBuilder().instantiate(viewController: self)
-
-        navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "Coffee Co Shifts"
-        shiftsTableView.register(UINib(nibName: "ShiftTableViewCell", bundle: nil), forCellReuseIdentifier: "ShiftTableViewCell")
-
+        setupPage()
         BindUI()
         viewModel?.fetchShifts()
     }
     
-    func BindUI() {
+    private func setupPage() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Coffee Co Shifts"
+        
+        addNewShiftButton = UIBarButtonItem(title: "Add Shift", style: .plain, target: self, action: #selector(addNewShift))
+        self.navigationItem.rightBarButtonItem  = addNewShiftButton
+        
+        registerTable()
+    }
+    
+    private func registerTable() {
+        shiftsTableView.register(UINib(nibName: "ShiftTableViewCell", bundle: nil), forCellReuseIdentifier: "ShiftTableViewCell")
+    }
+    
+    private func BindUI() {
         guard let viewModel = viewModel else {
             return
         }
@@ -42,6 +53,10 @@ class ShiftsViewController: UIViewController, UIScrollViewDelegate{
                
         }.disposed(by: disposeBag)
             
+    }
+    
+    @objc private func addNewShift() {
+        viewModel?.addNewShiftPressed()
     }
 
 }

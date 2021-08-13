@@ -28,6 +28,11 @@
 		D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */; };
 		D01576DE26C5FC7C0024D902 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */; };
 		D01576E026C5FE380024D902 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576DF26C5FE380024D902 /* DateFormatter+Extension.swift */; };
+		D0D68F9026C680CD00F2B039 /* AddNewShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68F8E26C680CD00F2B039 /* AddNewShiftViewController.swift */; };
+		D0D68F9126C680CD00F2B039 /* AddNewShiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D68F8F26C680CD00F2B039 /* AddNewShiftViewController.xib */; };
+		D0D68F9326C686AB00F2B039 /* ShiftsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68F9226C686AB00F2B039 /* ShiftsCoordinator.swift */; };
+		D0D68F9526C6878300F2B039 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68F9426C6878300F2B039 /* UIViewController+Extensions.swift */; };
+		D0D68F9826C687BD00F2B039 /* AddNewShiftBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D68F9726C687BD00F2B039 /* AddNewShiftBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsBuilder.swift; sourceTree = "<group>"; };
 		D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D01576DF26C5FE380024D902 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		D0D68F8E26C680CD00F2B039 /* AddNewShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShiftViewController.swift; sourceTree = "<group>"; };
+		D0D68F8F26C680CD00F2B039 /* AddNewShiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewShiftViewController.xib; sourceTree = "<group>"; };
+		D0D68F9226C686AB00F2B039 /* ShiftsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsCoordinator.swift; sourceTree = "<group>"; };
+		D0D68F9426C6878300F2B039 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		D0D68F9726C687BD00F2B039 /* AddNewShiftBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShiftBuilder.swift; sourceTree = "<group>"; };
 		F1729F501D9100AAED91B801 /* Pods-CoffeeCoShifts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts.release.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts/Pods-CoffeeCoShifts.release.xcconfig"; sourceTree = "<group>"; };
 		F6410537D8CFE7B1661264AB /* Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,10 +146,10 @@
 		D015768F26C5D2DA0024D902 /* CoffeeCoShifts */ = {
 			isa = PBXGroup;
 			children = (
+				D0D68F8B26C680A100F2B039 /* Modules */,
 				D01576DC26C5FC710024D902 /* Extension */,
 				D01576D026C5EF930024D902 /* Resources */,
 				D01576C626C5E22F0024D902 /* Base */,
-				D01576C026C5E0500024D902 /* CoffeShiftList */,
 				D015769026C5D2DA0024D902 /* AppDelegate.swift */,
 				D015769226C5D2DA0024D902 /* SceneDelegate.swift */,
 				D015769926C5D2DB0024D902 /* Assets.xcassets */,
@@ -209,6 +219,7 @@
 		D01576C426C5E0760024D902 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				D0D68F9226C686AB00F2B039 /* ShiftsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -251,8 +262,44 @@
 			children = (
 				D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */,
 				D01576DF26C5FE380024D902 /* DateFormatter+Extension.swift */,
+				D0D68F9426C6878300F2B039 /* UIViewController+Extensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D0D68F8B26C680A100F2B039 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D0D68F8C26C680A800F2B039 /* AddNewShiftForm */,
+				D01576C026C5E0500024D902 /* CoffeShiftList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D0D68F8C26C680A800F2B039 /* AddNewShiftForm */ = {
+			isa = PBXGroup;
+			children = (
+				D0D68F9626C687B100F2B039 /* Builder */,
+				D0D68F8D26C680B600F2B039 /* View */,
+			);
+			path = AddNewShiftForm;
+			sourceTree = "<group>";
+		};
+		D0D68F8D26C680B600F2B039 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0D68F8E26C680CD00F2B039 /* AddNewShiftViewController.swift */,
+				D0D68F8F26C680CD00F2B039 /* AddNewShiftViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0D68F9626C687B100F2B039 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D0D68F9726C687BD00F2B039 /* AddNewShiftBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		D426F3DED242CF4BA52584A6 /* Frameworks */ = {
@@ -388,6 +435,7 @@
 			files = (
 				D01576D226C5EF9D0024D902 /* shifts.json in Resources */,
 				D01576CD26C5E92D0024D902 /* ShiftTableViewCell.xib in Resources */,
+				D0D68F9126C680CD00F2B039 /* AddNewShiftViewController.xib in Resources */,
 				D015769D26C5D2DB0024D902 /* LaunchScreen.storyboard in Resources */,
 				D015769A26C5D2DB0024D902 /* Assets.xcassets in Resources */,
 				D015769826C5D2DA0024D902 /* Main.storyboard in Resources */,
@@ -520,6 +568,7 @@
 			files = (
 				D01576CC26C5E92D0024D902 /* ShiftTableViewCell.swift in Sources */,
 				D01576E026C5FE380024D902 /* DateFormatter+Extension.swift in Sources */,
+				D0D68F9026C680CD00F2B039 /* AddNewShiftViewController.swift in Sources */,
 				D015769526C5D2DA0024D902 /* ShiftsViewController.swift in Sources */,
 				D015769126C5D2DA0024D902 /* AppDelegate.swift in Sources */,
 				D01576CF26C5EF300024D902 /* ShiftsViewModel.swift in Sources */,
@@ -527,7 +576,10 @@
 				D015769326C5D2DA0024D902 /* SceneDelegate.swift in Sources */,
 				D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */,
 				D01576D526C5F1350024D902 /* ShiftsResponse.swift in Sources */,
+				D0D68F9826C687BD00F2B039 /* AddNewShiftBuilder.swift in Sources */,
+				D0D68F9526C6878300F2B039 /* UIViewController+Extensions.swift in Sources */,
 				D01576C826C5E2390024D902 /* BaseCoordinator.swift in Sources */,
+				D0D68F9326C686AB00F2B039 /* ShiftsCoordinator.swift in Sources */,
 				D01576DE26C5FC7C0024D902 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

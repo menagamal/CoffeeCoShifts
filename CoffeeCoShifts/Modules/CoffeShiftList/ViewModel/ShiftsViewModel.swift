@@ -8,9 +8,16 @@
 import Foundation
 import RxSwift
 import RxCocoa
+
 class ShiftsViewModel {
     
     var shifts: BehaviorRelay<[Shift]> = BehaviorRelay(value: [Shift]())
+    
+    private var coordinator: ShiftsCoordinator
+    
+    init(coordinator: ShiftsCoordinator) {
+        self.coordinator = coordinator
+    }
     
     func fetchShifts()  {
         if let url = Bundle.main.url(forResource: "shifts", withExtension: "json") {
@@ -25,6 +32,10 @@ class ShiftsViewModel {
                 print(error)
             }
         }
+    }
+    
+    func addNewShiftPressed() {
+        coordinator.navigate(to: .addNewShifts(shifts: shifts))
     }
     
 }

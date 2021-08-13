@@ -9,6 +9,7 @@ import Foundation
 
 class ShiftsBuilder {
     func instantiate(viewController: ShiftsViewController){
-        viewController.viewModel = ShiftsViewModel()
+        let coordinator = ShiftsCoordinator(rootViewController: viewController)
+        viewController.viewModel = ShiftsViewModel(coordinator: coordinator)
     }
 }
