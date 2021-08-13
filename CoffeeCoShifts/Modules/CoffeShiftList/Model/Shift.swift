@@ -30,6 +30,9 @@ struct Shift : Codable {
         self.start_date = start_date
         self.color = color
         self.name = name
+        formattedStartDate = DateFormatter.stringDateOnly(iso: start_date)
+        formattedStartTime = DateFormatter.stringTimeOnly(iso: start_date)
+        
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)

@@ -31,6 +31,7 @@ extension DateFormatter {
         formatter.pmSymbol = "PM"
         return formatter
     }()
+    
 
     static func stringDateOnly(iso string: String) -> String  {
         if let date = DateFormatter.iso8601Full.date(from: string) {
@@ -43,5 +44,9 @@ extension DateFormatter {
             return  DateFormatter.timeOnly.string(from: date)
         }
         return ""
+    }
+    
+    static func stringFromDateWithIso8601Full(date: Date) -> String  {
+        return  DateFormatter.iso8601Full.string(from: date)
     }
 }

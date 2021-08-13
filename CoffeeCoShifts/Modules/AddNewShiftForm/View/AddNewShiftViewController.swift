@@ -25,13 +25,22 @@ class AddNewShiftViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        saveShiftButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveNewShiftAction))
-        self.navigationItem.rightBarButtonItem  = saveShiftButton
-        startDatePicker.minimumDate = Date()
-
+        setupViews()
         BindUI()
     }
 
+    func setupViews()  {
+        saveShiftButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveNewShiftAction))
+        self.navigationItem.rightBarButtonItem  = saveShiftButton
+        startDatePicker.minimumDate = Date()
+        
+        viewModel?.setEmployee(index: 0)
+        viewModel?.setRole(index: 0)
+        viewModel?.setColor(index: 0)
+        viewModel?.setStartDate(date: startDatePicker.date)
+        viewModel?.setEndDate(date: endDatePicker.date)
+    }
+    
     @objc private func saveNewShiftAction() {
         viewModel?.save()
     }

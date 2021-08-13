@@ -39,16 +39,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8E7C8FAF-281F-4E0A-9F59-315D9C15E8CE"
+            uuid = "40870CAF-3250-4C5F-AEB7-CA82FFA24A99"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CoffeeCoShifts/Modules/AddNewShiftForm/Builder/AddNewShiftBuilder.swift"
+            filePath = "CoffeeCoShifts/Modules/AddNewShiftForm/ViewModel/AddShiftViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "instantiate(completation:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "save()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FF1A626-92EC-4E42-952F-3678D6DFDCDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeCoShifts/Modules/CoffeShiftList/View/ShiftsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "BindUI()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

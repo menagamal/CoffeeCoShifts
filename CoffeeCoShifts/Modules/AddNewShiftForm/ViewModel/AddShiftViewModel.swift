@@ -51,7 +51,10 @@ class AddShiftViewModel {
               let color = selectedColor else {
                 return
         }
-        newShift.onNext(Shift(role: role, name: employee, start_date: "sss", end_date: "ss", color: color))
+        let x = DateFormatter.stringFromDateWithIso8601Full(date: startDate)
+        let y = DateFormatter.stringFromDateWithIso8601Full(date: endDate)
+        
+        newShift.onNext(Shift(role: role, name: employee, start_date: x, end_date: y, color: color))
         
     }
     
