@@ -22,7 +22,10 @@
 		D01576CC26C5E92D0024D902 /* ShiftTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576CA26C5E92D0024D902 /* ShiftTableViewCell.swift */; };
 		D01576CD26C5E92D0024D902 /* ShiftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D01576CB26C5E92D0024D902 /* ShiftTableViewCell.xib */; };
 		D01576CF26C5EF300024D902 /* ShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576CE26C5EF300024D902 /* ShiftsViewModel.swift */; };
-		D01576D226C5EF9D0024D902 /* shifts .json in Resources */ = {isa = PBXBuildFile; fileRef = D01576D126C5EF9D0024D902 /* shifts .json */; };
+		D01576D226C5EF9D0024D902 /* shifts.json in Resources */ = {isa = PBXBuildFile; fileRef = D01576D126C5EF9D0024D902 /* shifts.json */; };
+		D01576D526C5F1350024D902 /* ShiftsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D426C5F1350024D902 /* ShiftsResponse.swift */; };
+		D01576D726C5F13D0024D902 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D626C5F13D0024D902 /* Shift.swift */; };
+		D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +71,10 @@
 		D01576CA26C5E92D0024D902 /* ShiftTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTableViewCell.swift; sourceTree = "<group>"; };
 		D01576CB26C5E92D0024D902 /* ShiftTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShiftTableViewCell.xib; sourceTree = "<group>"; };
 		D01576CE26C5EF300024D902 /* ShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsViewModel.swift; sourceTree = "<group>"; };
-		D01576D126C5EF9D0024D902 /* shifts .json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "shifts .json"; sourceTree = "<group>"; };
+		D01576D126C5EF9D0024D902 /* shifts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = shifts.json; sourceTree = "<group>"; };
+		D01576D426C5F1350024D902 /* ShiftsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsResponse.swift; sourceTree = "<group>"; };
+		D01576D626C5F13D0024D902 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
+		D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsBuilder.swift; sourceTree = "<group>"; };
 		F1729F501D9100AAED91B801 /* Pods-CoffeeCoShifts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts.release.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts/Pods-CoffeeCoShifts.release.xcconfig"; sourceTree = "<group>"; };
 		F6410537D8CFE7B1661264AB /* Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +195,8 @@
 		D01576C326C5E0710024D902 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D01576D426C5F1350024D902 /* ShiftsResponse.swift */,
+				D01576D626C5F13D0024D902 /* Shift.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 		D01576C526C5E07D0024D902 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
+				D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -227,7 +236,7 @@
 		D01576D026C5EF930024D902 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D01576D126C5EF9D0024D902 /* shifts .json */,
+				D01576D126C5EF9D0024D902 /* shifts.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -363,7 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D01576D226C5EF9D0024D902 /* shifts .json in Resources */,
+				D01576D226C5EF9D0024D902 /* shifts.json in Resources */,
 				D01576CD26C5E92D0024D902 /* ShiftTableViewCell.xib in Resources */,
 				D015769D26C5D2DB0024D902 /* LaunchScreen.storyboard in Resources */,
 				D015769A26C5D2DB0024D902 /* Assets.xcassets in Resources */,
@@ -499,7 +508,10 @@
 				D015769526C5D2DA0024D902 /* ShiftsViewController.swift in Sources */,
 				D015769126C5D2DA0024D902 /* AppDelegate.swift in Sources */,
 				D01576CF26C5EF300024D902 /* ShiftsViewModel.swift in Sources */,
+				D01576D726C5F13D0024D902 /* Shift.swift in Sources */,
 				D015769326C5D2DA0024D902 /* SceneDelegate.swift in Sources */,
+				D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */,
+				D01576D526C5F1350024D902 /* ShiftsResponse.swift in Sources */,
 				D01576C826C5E2390024D902 /* BaseCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

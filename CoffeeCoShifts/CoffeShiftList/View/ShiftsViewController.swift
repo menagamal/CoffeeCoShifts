@@ -12,19 +12,36 @@ import RxSwift
 class ShiftsViewController: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet weak var shiftsTableView: UITableView!
+    
+    var viewModel: ShiftsViewModel?
     var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ShiftsBuilder().instantiate(viewController: self)
+
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Coffee Co Shifts"
+        shiftsTableView.register(UINib(nibName: "ShiftTableViewCell", bundle: nil), forCellReuseIdentifier: "ShiftTableViewCell")
+
+        BindUI()
+        viewModel?.fetchShifts()
     }
     
     func BindUI() {
-        shiftsTableView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
+        guard let viewModel = viewModel else {
+            return
+        }
         
+        viewModel.shifts.asObservable()
+            .bind(to: shiftsTableView.rx
+                .items(cellIdentifier: "ShiftTableViewCell", cellType: ShiftTableViewCell.self))
+            { _, element, cell in
+
+               
+        }.disposed(by: disposeBag)
+            
     }
 
 }
