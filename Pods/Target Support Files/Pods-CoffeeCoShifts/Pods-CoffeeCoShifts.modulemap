@@ -1,0 +1,6 @@
+framework module Pods_CoffeeCoShifts {
+  umbrella header "Pods-CoffeeCoShifts-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_CoffeeCoShifts_CoffeeCoShiftsUITests {
+  umbrella header "Pods-CoffeeCoShifts-CoffeeCoShiftsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
