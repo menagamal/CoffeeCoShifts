@@ -15,9 +15,9 @@ class ShiftTableViewCell: UITableViewCell {
   
     
     func configure(with shift:Shift)  {
-        labelTitle.text = "\(shift.name ?? "") (\(shift.role ?? ""))"
+        labelTitle.text = "\(shift.name ?? "") (\(shift.role ?? "")) \(shift.formattedStartDate ?? "")"
         coloredView.backgroundColor =  UIColor().named(shift.color ?? "")
-        
+        labelTime.text = shift.formattedStartTime ?? "" 
         coloredView.layer.cornerRadius = coloredView.frame.size.width/2
         coloredView.clipsToBounds = true
         

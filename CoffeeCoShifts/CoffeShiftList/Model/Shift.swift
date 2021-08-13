@@ -8,9 +8,12 @@ import Foundation
 struct Shift : Codable {
     let role : String?
     let name : String?
-    let start_date : String?
+    var start_date : String?
     let end_date : String?
     let color : String?
+    
+    var formattedStartDate: String?
+    var formattedStartTime: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -28,6 +31,10 @@ struct Shift : Codable {
         start_date = try values.decodeIfPresent(String.self, forKey: .start_date)
         end_date = try values.decodeIfPresent(String.self, forKey: .end_date)
         color = try values.decodeIfPresent(String.self, forKey: .color)
+        if let start_date = start_date {
+            formattedStartDate = DateFormatter.stringDateOnly(iso: start_date)
+            formattedStartTime = DateFormatter.stringTimeOnly(iso: start_date)
+        }
     }
 
 }

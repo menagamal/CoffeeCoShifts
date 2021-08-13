@@ -27,6 +27,7 @@
 		D01576D726C5F13D0024D902 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D626C5F13D0024D902 /* Shift.swift */; };
 		D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */; };
 		D01576DE26C5FC7C0024D902 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */; };
+		D01576E026C5FE380024D902 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576DF26C5FE380024D902 /* DateFormatter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D01576D626C5F13D0024D902 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsBuilder.swift; sourceTree = "<group>"; };
 		D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D01576DF26C5FE380024D902 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		F1729F501D9100AAED91B801 /* Pods-CoffeeCoShifts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts.release.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts/Pods-CoffeeCoShifts.release.xcconfig"; sourceTree = "<group>"; };
 		F6410537D8CFE7B1661264AB /* Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */,
+				D01576DF26C5FE380024D902 /* DateFormatter+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D01576CC26C5E92D0024D902 /* ShiftTableViewCell.swift in Sources */,
+				D01576E026C5FE380024D902 /* DateFormatter+Extension.swift in Sources */,
 				D015769526C5D2DA0024D902 /* ShiftsViewController.swift in Sources */,
 				D015769126C5D2DA0024D902 /* AppDelegate.swift in Sources */,
 				D01576CF26C5EF300024D902 /* ShiftsViewModel.swift in Sources */,
