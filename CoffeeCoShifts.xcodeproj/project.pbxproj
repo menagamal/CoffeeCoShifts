@@ -26,6 +26,7 @@
 		D01576D526C5F1350024D902 /* ShiftsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D426C5F1350024D902 /* ShiftsResponse.swift */; };
 		D01576D726C5F13D0024D902 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D626C5F13D0024D902 /* Shift.swift */; };
 		D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */; };
+		D01576DE26C5FC7C0024D902 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		D01576D426C5F1350024D902 /* ShiftsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsResponse.swift; sourceTree = "<group>"; };
 		D01576D626C5F13D0024D902 /* Shift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
 		D01576D826C5F7C60024D902 /* ShiftsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftsBuilder.swift; sourceTree = "<group>"; };
+		D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F1729F501D9100AAED91B801 /* Pods-CoffeeCoShifts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts.release.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts/Pods-CoffeeCoShifts.release.xcconfig"; sourceTree = "<group>"; };
 		F6410537D8CFE7B1661264AB /* Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests/Pods-CoffeeCoShifts-CoffeeCoShiftsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 		D015768F26C5D2DA0024D902 /* CoffeeCoShifts */ = {
 			isa = PBXGroup;
 			children = (
+				D01576DC26C5FC710024D902 /* Extension */,
 				D01576D026C5EF930024D902 /* Resources */,
 				D01576C626C5E22F0024D902 /* Base */,
 				D01576C026C5E0500024D902 /* CoffeShiftList */,
@@ -239,6 +242,14 @@
 				D01576D126C5EF9D0024D902 /* shifts.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D01576DC26C5FC710024D902 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D01576DD26C5FC7C0024D902 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D426F3DED242CF4BA52584A6 /* Frameworks */ = {
@@ -513,6 +524,7 @@
 				D01576D926C5F7C60024D902 /* ShiftsBuilder.swift in Sources */,
 				D01576D526C5F1350024D902 /* ShiftsResponse.swift in Sources */,
 				D01576C826C5E2390024D902 /* BaseCoordinator.swift in Sources */,
+				D01576DE26C5FC7C0024D902 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

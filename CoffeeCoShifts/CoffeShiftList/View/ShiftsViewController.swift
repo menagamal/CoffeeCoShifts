@@ -37,8 +37,8 @@ class ShiftsViewController: UIViewController, UIScrollViewDelegate{
         viewModel.shifts.asObservable()
             .bind(to: shiftsTableView.rx
                 .items(cellIdentifier: "ShiftTableViewCell", cellType: ShiftTableViewCell.self))
-            { _, element, cell in
-
+            { _, shift, cell in
+                cell.configure(with: shift)
                
         }.disposed(by: disposeBag)
             
