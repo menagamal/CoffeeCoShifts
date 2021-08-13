@@ -12,19 +12,20 @@ import RxCocoa
 class ShiftsCoordinator: BaseCoordinator {
     
     enum Destination {
-        case addNewShifts(shifts: BehaviorRelay<[Shift]>)
+        case addNewShifts(completation: NewShiftCompletationAdded)
     }
     
     var rootViewController: UIViewController
     
+    var formBuilder = AddNewShiftBuilder()
     init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
     }
     
     func makeViewController(for destination: Destination) -> UIViewController {
         switch destination {
-        case .addNewShifts(let shifts):
-            return   addNewShiftsInstance(shifts)
+        case .addNewShifts(let completation):
+            return   addNewShiftsInstance(completation: completation)
         }
     }
     func navigate(to destination: ShiftsCoordinator.Destination) {
@@ -40,7 +41,7 @@ class ShiftsCoordinator: BaseCoordinator {
 }
 private extension ShiftsCoordinator {
     
-    func addNewShiftsInstance(_ shifts: BehaviorRelay<[Shift]>)  -> UIViewController {
-        return AddNewShiftBuilder().instantiate()
+    func addNewShiftsInstance(completation: @escaping NewShiftCompletationAdded)  -> UIViewController {
+        return formBuilder.instantiate(completation: completation)
     }
 }

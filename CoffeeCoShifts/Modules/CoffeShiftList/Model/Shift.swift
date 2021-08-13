@@ -24,6 +24,13 @@ struct Shift : Codable {
         case color = "color"
     }
 
+    init( role : String, name : String, start_date : String, end_date : String, color : String) {
+        self.role = role
+        self.end_date = end_date
+        self.start_date = start_date
+        self.color = color
+        self.name = name
+    }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         role = try values.decodeIfPresent(String.self, forKey: .role)

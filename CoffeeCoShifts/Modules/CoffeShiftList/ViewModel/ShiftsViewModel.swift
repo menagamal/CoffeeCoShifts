@@ -35,7 +35,11 @@ class ShiftsViewModel {
     }
     
     func addNewShiftPressed() {
-        coordinator.navigate(to: .addNewShifts(shifts: shifts))
+        coordinator.navigate(to: .addNewShifts(completation: { newShift in
+            var currentVals = self.shifts.value
+            currentVals.append(newShift)
+            self.shifts.accept(currentVals)
+        }))
     }
     
 }
